@@ -115,5 +115,11 @@ namespace Faker.Tests
         {
             Assert.IsNotNull(Address.USCounty());
         }
+
+        [TestMethod]
+        public void RUSCity()
+        {
+            Assert.IsNotNull(Address.RusCity());
+        }
     }
 }

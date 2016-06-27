@@ -27,6 +27,7 @@ namespace Faker
         private static List<string> usZipCode;
         private static List<string> usCity;
         private static List<string> usCounty;
+        private static List<string> rusCity;
 
         /// <summary>
         /// Gets a random state
@@ -244,6 +245,18 @@ namespace Faker
             }
 
             return usCounty[Number.RandomNumber(0, usCounty.Count - 1)];
+        }
+        /// <summary>
+        /// Получить случайны город России
+        /// </summary>
+        /// <returns>A string value</returns>
+        public static string RusCity()
+        {
+            if (rusCity == null)
+            {
+                rusCity = XML.GetListString("RUSCity");
+            }
+            return rusCity[Number.RandomNumber(0, rusCity.Count - 1)];
         }
     }
 }
