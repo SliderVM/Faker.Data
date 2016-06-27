@@ -29,6 +29,7 @@ var usCity = Faker.Address.USCity();
 var usCounty = Faker.Address.USCounty();
 var canadianZip = Faker.Address.CanadianZip();
 var usZip = Faker.Address.USZip();
+var rusCity = Faker.Address.RusCity(); - получить российский город
 ```
 #### Name
 ```
