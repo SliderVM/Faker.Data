@@ -17,11 +17,13 @@ namespace Faker
         private static object femaleFirstNameLock = new object();
         private static object lastNameLock = new object();
         private static object ethnicityLock = new object();
+        private static object patronymicLock = new object();
         private static List<string> maleFirstName;
         private static List<string> femaleFirstName;
         private static List<string> firstName;
         private static List<string> lastName;
         private static List<string> ethnicity;
+        private static List<string> patronymic;
 
         /// <summary>
         /// Gets a random male first name
@@ -77,7 +79,7 @@ namespace Faker
         /// <returns>A string value</returns>
         public static string FullName()
         {
-            return FirstName() + LastName();
+            return FirstName() + LastName() + Patronymic();
         }
 
         /// <summary>
@@ -96,6 +98,24 @@ namespace Faker
                 }
 
                 return firstName[Number.RandomNumber(0, firstName.Count - 1)];
+            }
+        }
+
+        /// <summary>
+        /// Получаем случайное отчество
+        /// </summary>
+        /// <returns>A string value</returns>
+        public static string Patronymic()
+        {
+            lock (patronymicLock)
+            {
+                if (patronymic == null)
+                {
+                    patronymic = new List<string>();
+                    patronymic.AddRange(XML.GetListString("Patronymic"));
+                }
+
+                return patronymic[Number.RandomNumber(0, patronymic.Count() - 1)];
             }
         }
 

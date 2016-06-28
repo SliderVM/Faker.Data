@@ -54,5 +54,10 @@ namespace Faker.Tests
         {
             Assert.IsNotNull(Name.Ethnicity());
         }
+        [TestMethod]
+        public void Patronymic()
+        {
+            Assert.IsNotNull(Name.Patronymic());
+        }
     }
 }
