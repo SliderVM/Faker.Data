@@ -1,17 +1,8 @@
 # Faker
 Faker is a C# library used to easily generate fake data for: names, address, and many more!
 
-It is available via [NuGet Package](https://www.nuget.org/packages/Faker.Data/)
+К сожалению NuGet пока не поддерживается. Возможно в будущем будет.
 
-
-|CI Build | NuGet Package Deployment| NuGet |
-| :------: | :----: | :---: | :----: | :-----: |
-| ![CI Build Status](https://ferm.visualstudio.com/DefaultCollection/_apis/public/build/definitions/c55f9b7a-25b6-4f2e-8b7e-b1c8345d9344/10/badge) | ![Package Build Status](https://ferm.visualstudio.com/DefaultCollection/_apis/public/build/definitions/c55f9b7a-25b6-4f2e-8b7e-b1c8345d9344/11/badge) | [![NuGet Status](https://buildstats.info/nuget/faker.data/)](https://www.nuget.org/packages/Faker.Data/)
-
-Install the NuGet package via the Package Manager or
-```
-PM> Install-Package Faker.Data
-```
 ## Usage
 
 #### Addresses
@@ -40,6 +31,7 @@ var full = Faker.Name.FullName();
 var last = Faker.Name.LastName();
 var gender = Faker.Name.Gender();
 var ethnicity = Faker.Name.Ethnicity();
+var ethnicity = Faker.Name.Patronymic(); - Возвращает случайное отчество
 ```
 #### Geo Location
 ```
