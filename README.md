@@ -31,7 +31,7 @@ var full = Faker.Name.FullName();
 var last = Faker.Name.LastName();
 var gender = Faker.Name.Gender();
 var ethnicity = Faker.Name.Ethnicity();
-var ethnicity = Faker.Name.Patronymic(); - Возвращает случайное отчество
+var Patronymic = Faker.Name.Patronymic(); - Возвращает случайное отчество
 ```
 #### Geo Location
 ```
